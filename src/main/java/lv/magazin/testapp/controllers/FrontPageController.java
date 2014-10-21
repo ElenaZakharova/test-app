@@ -1,4 +1,4 @@
-package lv.k2611a.testapp.controllers;
+package lv.magazin.testapp.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,11 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class FrontPageController {
 
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{userId}")
-    public String getMainPage(Model model, @PathVariable Long userId) {
-        model.addAttribute("username", "Vasya Pupkin");
+    @RequestMapping(method = RequestMethod.GET, value = "/{categoryId}")
+    public String getMainPage(Model model, @PathVariable Long categoryId) {
+        model.addAttribute("categoryName", "Apartment");
         return "hello";
     }
-
-
 }

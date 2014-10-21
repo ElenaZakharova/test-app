@@ -8,9 +8,9 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
-<p> ${user}  </p>
+<h1>${productName}</h1>
 
-<p> ${blog}  </p>
+<p> Price: </p>
+<p> ${productPrice}  </p>
 </body>
 </html>

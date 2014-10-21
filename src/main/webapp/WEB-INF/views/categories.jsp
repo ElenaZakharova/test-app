@@ -6,15 +6,14 @@
 
 <!DOCTYPE html>
 <html>
-<body>
 
-<h1>My Blogs Page</h1>
-<h1>${user}</h1>
+<body>
+<h1>Категории товаров:</h1>
 <ul>
 
-<c:forEach var="blog" items="${blogs}">
-<a href = "http://localhost:9090/test-mvn-app/user/${blog.userId}/blog/${blog.blogId}">
-    <li>${blog.name}</li></a>
+<c:forEach var="category" items="${categories}">
+<a href = "http://localhost:9090/test-mvn-app/category/${category.categoryId}">
+    <li>${category.categoryName}</li></a>
 </c:forEach>
 </ul>
 
