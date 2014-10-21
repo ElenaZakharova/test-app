@@ -6,15 +6,18 @@
 
 <!DOCTYPE html>
 <html>
+
 <body>
+<h1>Все товары:</h1>
+<ul>
 
-<h1>${productName}</h1>
+<c:forEach var="product" items="${allproducts}">
+<a href = "http://localhost:9090/test-mvn-app/category/${product.categoryId}/product/${product.productId}">
+    <li>${product.productName}</li></a>
+</c:forEach>
+</ul>
 
-<p> Price: </p>
-<p> ${productPrice}  </p>
 
-<a href = "http://localhost:9090/test-mvn-app/category/${categoryId}">
-    <p>Назад в категорию</p></a>
 
 
 </body>

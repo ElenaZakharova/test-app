@@ -19,6 +19,9 @@
 </c:forEach>
 </ul>
 
+<a href = "http://localhost:9090/test-mvn-app/category">
+    <p>К списку категорий</p></a>
+
 
 
 

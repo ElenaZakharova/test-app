@@ -1,5 +1,6 @@
 package lv.magazin.testapp.services;
 
+import lv.magazin.testapp.domain.Category;
 import lv.magazin.testapp.domain.Product;
 import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
@@ -22,7 +23,7 @@ public class ProductService {
         put(new Product("Stool", 4, 40, 1));
         put(new Product("Refrigerator", 5, 430, 1));
         put(new Product("Bath", 6, 300, 3));
-        put(new Product("coffee table", 7, 120, 4));
+        put(new Product("Coffee table", 7, 120, 4));
     }
 
     private void put(Product product) {
@@ -43,6 +44,9 @@ public class ProductService {
         return categoryProducts;
     }
 
+    public List<Product> getAllProducts() {
+        return new ArrayList<Product>(products.values());
+    }
 
     public Product getProductById(Long productIndex) {
         if (products.containsKey(productIndex)) {

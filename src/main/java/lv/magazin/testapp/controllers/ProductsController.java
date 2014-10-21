@@ -37,6 +37,7 @@ public class ProductsController {
         }
         model.addAttribute("productPrice", product.getProductPrice());
         model.addAttribute("productName", product.getProductName());
+        model.addAttribute("categoryId", product.getCategoryId());
         return "product";
     }
 }
